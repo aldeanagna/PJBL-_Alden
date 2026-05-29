@@ -15,7 +15,7 @@ with st.sidebar:
 
     pilihan = st.selectbox(
         "Pilihan Bangun Datar",
-        ["Persegi", "Persegi Panjang", "Lingkaran"]
+        ["Persegi", "Persegi Panjang", "Lingkaran", "Segitiga", "Jajar Genjang"]
     )
 
     st.caption("Dibuat dengan :fire: oleh **Alden Agna**")
@@ -67,6 +67,44 @@ match pilihan:
 
             st.success(
                 f"Luas Lingkaran: {luas:.2f} dan kelilingnya adalah {keliling:.2f}"
+            )
+
+            st.balloons()
+
+        case "Segitiga":
+        st.title("Segitiga")
+        st.markdown("Menghitung `luas` dan `keliling` Segitiga")
+
+        alas = st.number_input("Masukkan alas")
+        tinggi = st.number_input("Masukkan tinggi")
+        sisi1 = st.number_input("Masukkan sisi 1")
+        sisi2 = st.number_input("Masukkan sisi 2")
+        sisi3 = st.number_input("Masukkan sisi 3")
+
+        if st.button("Hitung"):
+            luas = 0.5 * alas * tinggi
+            keliling = sisi1 + sisi2 + sisi3
+
+            st.success(
+                f"Luas Segitiga: {luas:.2f} dan kelilingnya adalah {keliling:.2f}"
+            )
+
+            st.balloons()
+
+    case "Jajar Genjang":
+        st.title("Jajar Genjang")
+        st.markdown("Menghitung `luas` dan `keliling` Jajar Genjang")
+
+        alas = st.number_input("Masukkan alas")
+        tinggi = st.number_input("Masukkan tinggi")
+        sisi_miring = st.number_input("Masukkan sisi miring")
+
+        if st.button("Hitung"):
+            luas = alas * tinggi
+            keliling = 2 * (alas + sisi_miring)
+
+            st.success(
+                f"Luas Jajar Genjang: {luas:.2f} dan kelilingnya adalah {keliling:.2f}"
             )
 
             st.balloons()
