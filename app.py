@@ -71,7 +71,7 @@ match pilihan:
 
             st.balloons()
 
-        case "Segitiga":
+    case "Segitiga":
         st.title("Segitiga")
         st.markdown("Menghitung `luas` dan `keliling` Segitiga")
 
